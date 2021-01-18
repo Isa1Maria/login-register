@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import fire from './fire';
 import './App.css';
 import Login from './Login';
-import Signup from './Signup';
 import Main from './Main';
 
 
