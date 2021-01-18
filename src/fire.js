@@ -1,5 +1,7 @@
 import firebase from 'firebase';
 
+
+
 var firebaseConfig = {
     apiKey: "AIzaSyAl5AAte7Pp9tWwHh_0UG0I1ouHgZCubnU",
     authDomain: "fulguritchallenge.firebaseapp.com",
