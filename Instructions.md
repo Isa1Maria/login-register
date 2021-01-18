@@ -11,6 +11,6 @@ Instructions:
 
 -Click on the phrase "Login here" and it will change to the Login menu;
 
--After you enter your email and your password, click on the button "Login" that will redirect you to the main page where you can see a plan screen with an image;
+-After you enter your email and your password, click on the button "Login" that, if it's correct, it will redirect you to the main page where you can see a plan screen with an image, if not, an error message will appear "There is no user record corresponding to this identifier. The user may have been deleted."
 
 -In case you want to logout, on your top-right corner you will find a button "Logout" that when clicked will send you back to the login menu.
