@@ -23,7 +23,7 @@ const Login = (props) => {
               autoFocus 
               required 
               value={email} 
-              placeholder="Enter your email"
+              placeholder="Email"
               onChange={(e) => setEmail(e.target.value)}
           />
           <p className="errorMsg">{emailError}</p>
@@ -32,7 +32,7 @@ const Login = (props) => {
         type="password" 
         required 
         value={password} 
-        placeholder="Enter your password"
+        placeholder="Password"
         onChange={(e) => setPassword(e.target.value)}
     />
     <br/>
@@ -50,6 +50,7 @@ const Login = (props) => {
             </>
         )}
     </div>
+   
           </div>
         </section>
     )

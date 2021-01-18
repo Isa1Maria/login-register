@@ -1,13 +1,17 @@
 import React from 'react';
+import electronic from './electronic.png';
 
 const Hero = ({handleLogOut}) => {
 
     return(
-        <section className="hero">
+        <section className="main">
+           
         <nav>
-        <h2> Welcome </h2>
+        <img src={electronic} style={{height:'auto',width:'100%'}} alt="main"  />
         <button onClick={handleLogOut}>Logout</button>
+        
         </nav>
+        
         </section>
     );
 };
