@@ -1,4 +1,4 @@
-CHALLENGE UI_UX Login plus Register
+CHALLENGE UI_UX Login plus Register - Isabel Marques
 
 Instructions:
 

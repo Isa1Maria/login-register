@@ -1,7 +1,7 @@
 import React from 'react';
 import electronic from './electronic.png';
 
-const Hero = ({handleLogOut}) => {
+const Main = ({handleLogOut}) => {
 
     return(
         <section className="main">
@@ -16,4 +16,4 @@ const Hero = ({handleLogOut}) => {
     );
 };
 
-export default Hero;
+export default Main;

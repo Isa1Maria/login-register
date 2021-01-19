@@ -3,8 +3,10 @@ import React from 'react';
 const Login = (props) => {
 
     const { 
+        username,
+        setUsername,
         email, 
-        setEmail, 
+        setEmail,
         password, 
         setPassword, 
         handleLogin, 
@@ -18,30 +20,41 @@ const Login = (props) => {
     return(
         <section className="login">
           <div className="loginContainer">
-              <input 
-              type="text" 
+             <input type="text" 
+              autoFocus 
+              required 
+              value={username} 
+              placeholder="Username"
+              onChange={(e) => setUsername(e.target.value)}
+              />
+              <br/>
+              <input type="text" 
               autoFocus 
               required 
               value={email} 
               placeholder="Email"
               onChange={(e) => setEmail(e.target.value)}
-          />
-          <p className="errorMsg">{emailError}</p>
-          <br/>
-          <input 
-        type="password" 
-        required 
-        value={password} 
-        placeholder="Password"
-        onChange={(e) => setPassword(e.target.value)}
+              />
+              <br/>
+              <p className="errorMsg">{emailError}</p>
+              
+          <input type="password" 
+          required 
+          value={password} 
+          placeholder="Password" 
+          onChange={(e) => setPassword(e.target.value)}
     />
     <br/>
     <p className="errorMsg">{passwordError}</p>
+
+
+
     <div className="btnContainer">
         {hasAccount ? (
             <>
             <button onClick={handleLogin}> Login </button>
-            <p>Don't have an account? <span onClick={() => setHasAccount(!hasAccount)}> Register here! </span></p>
+            <p>Don't have an account? <span onClick={() => setHasAccount(!hasAccount)}> Register here! 
+            </span></p>
             </>
         ) : (
             <>

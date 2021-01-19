@@ -5,16 +5,17 @@ import Login from './Login';
 import Main from './Main';
 
 
-
 const App = () => {
   const [user, setUser] = useState("");
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [hasAccount, setHasAccount] = useState(false);
-  
-const clearInputs = () => {
+
+  const clearInputs = () => {
+  setUsername('');
   setEmail('');
   setPassword('');
 }
@@ -49,7 +50,11 @@ const handleSignup = () => {
   clearErrors();
   fire
   .auth()
-  .createUserWithEmailAndPassword(email, password)
+  .createUserWithEmailAndPassword(email, password).then(authUser => {
+    return authUser.user.updateProfile({
+      displayName: username,
+    })
+  })
   .catch((err) => {
     switch (err.code) {
       case "auth/email-already-in-use":
@@ -88,7 +93,10 @@ useEffect(() => {
       {user ? (
         <Main handleLogOut={handleLogOut}/>
       ) : (
+
        <Login 
+      username={username}
+      setUsername={setUsername}
       email={email} 
       setEmail={setEmail} 
       password={password} 
