@@ -6,15 +6,21 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  @media (max-width: 880px) {
-    .container {
-      flex-direction: column;
-      align-items: center;
+  @media (min-width: 360px) {
+    .loginContainer {
+      --scale: 0.8;
     }
   }
-  @media (min-width: 881px) and (max-width: 1215px) {
-    .container {
-      align-items: center;
+
+  @media (min-width: 768px) {
+    .loginContainer {
+      --scale: 1;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .loginContainer {
+      --scale: 1.2;
     }
   }
 }
@@ -23,7 +29,7 @@ button {
   border: none;
   outline: none;
   color: #fff;
-  font-size: 16px;
+  font-size: calc(16px * var(--scale));
   letter-spacing: 1px;
   background: #be5f2b;
   box-shadow: 0 30px 70px -20px #546e7a;
@@ -62,7 +68,7 @@ button:hover {
   color: rgb(216, 196, 196);
   margin: 14px 0;
   display: block;
-  font-size: 22px;
+  font-size: calc(22px * var(--scale));
   line-height: 1;
 }
 
@@ -70,7 +76,7 @@ button:hover {
   width: 100%;
   border: none;
   outline: none;
-  font-size: 15px;
+  font-size: calc(15px * var(--scale));
   padding: 12px;
   background: rgba(137, 146, 125, 0.1);
   color: rgb(74, 74, 78);
@@ -103,7 +109,7 @@ button:hover {
 
 .login .loginContainer .errorMsg {
   color: #963703;
-  font-size: 16px;
+  font-size: calc(16px * var(--scale));
 }
 
 .main {
